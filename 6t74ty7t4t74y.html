@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+<body>
+    
+</body>
+<script>
+    let word = ['h','e','l','l','o'];
+    function f1(i){
+    let elem = document.createElement('div');
+    elem.innerText = word[i];
+    elem.style.fontSize = '100px';
+    elem.style.color = 'red';
+    elem.style.backgroundColor = 'orange';
+    document.body.append(elem);
+}
+
+// f1(1); 
+
+let x = 0;
+
+ let timer = setInterval(() => {
+    f1(x);
+    x++;
+    if(x>=5){
+        clearInterval(timer);
+    }
+}, 1000);
+
+/* for(let i=0; i<10; i++){
+    f1();
+} */
+</script>
+</html>
