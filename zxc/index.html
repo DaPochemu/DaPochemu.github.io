@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes anim {
+        0%{opacity: 0; rotate: -90deg; scale: 3;}
+        100%{opacity: 1; rotate: 0; scale: 1;}
+        
+    }
+    img{
+        width: 200px;
+        animation: anim 2s;  
+    }
+/*     body{
+        font-size: 100px;
+    }*/
+</style>
+<body>
+    <div id='card' onclick="show()">
+        <img src="img/cardback.png" alt="">
+    </div>
+
+</body>
+<script>
+function show(){
+    let card = document.createElement('div');
+    card.innerHTML = '<img src="img/6ch.png" alt="">';
+    document.body.append(card);
+}
+</script>
+</html>
